@@ -1,6 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { UserProvider, useUser } from "@/contexts/UserContext";
+import { AuthWrapper } from "@/components/auth/AuthWrapper";
 import { LoginForm } from "@/components/auth/LoginForm";
 import { UserProfile } from "@/components/user/UserProfile";
 import { AdminPanel } from "@/components/admin/AdminPanel";
@@ -25,7 +25,7 @@ const DashboardContent = () => {
   }, []);
 
   if (!user) {
-    return <LoginForm />;
+    return <AuthWrapper />;
   }
 
   return (

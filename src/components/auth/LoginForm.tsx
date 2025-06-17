@@ -7,7 +7,11 @@ import { Label } from "@/components/ui/label";
 import { useUser } from '@/contexts/UserContext';
 import { Lock, Mail } from 'lucide-react';
 
-export const LoginForm = () => {
+interface LoginFormProps {
+  onSwitchToRegister: () => void;
+}
+
+export const LoginForm = ({ onSwitchToRegister }: LoginFormProps) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -21,7 +25,7 @@ export const LoginForm = () => {
 
     const success = await login(email, password);
     if (!success) {
-      setError('Invalid credentials. Try admin@example.com / admin or user@example.com / user');
+      setError('Invalid credentials. Please check your email and password.');
     }
     setIsLoading(false);
   };
@@ -80,10 +84,17 @@ export const LoginForm = () => {
               {isLoading ? 'Signing in...' : 'Sign In'}
             </Button>
           </form>
+          <div className="mt-4 text-center">
+            <button
+              onClick={onSwitchToRegister}
+              className="text-blue-400 hover:text-blue-300 text-sm"
+            >
+              Don't have an account? Sign up
+            </button>
+          </div>
           <div className="mt-6 text-center text-sm text-slate-400">
-            <p>Demo credentials:</p>
-            <p>Admin: admin@example.com / admin</p>
-            <p>User: user@example.com / user</p>
+            <p>Demo admin account:</p>
+            <p>admin@example.com / admin</p>
           </div>
         </CardContent>
       </Card>

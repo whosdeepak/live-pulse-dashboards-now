@@ -22,7 +22,7 @@ export const DashboardHeader = ({ currentTime, selectedDashboard, onDashboardCha
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <h1 className="text-2xl font-bold text-white">PowerBoard</h1>
+              <h1 className="text-2xl font-bold text-white">Live PowerBoard</h1>
             </div>
             
             <nav className="flex space-x-2">

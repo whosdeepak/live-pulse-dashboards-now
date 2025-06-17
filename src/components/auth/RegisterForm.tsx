@@ -71,9 +71,9 @@ export const RegisterForm = ({ onSwitchToLogin }: RegisterFormProps) => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
       <Card className="w-full max-w-md bg-slate-800/50 border-slate-700/50">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold text-white">Create Account</CardTitle>
+          <CardTitle className="text-2xl font-bold text-white">Join PowerBoard</CardTitle>
           <CardDescription className="text-slate-300">
-            Sign up to access the dashboard
+            Create your account to access the dashboard
           </CardDescription>
         </CardHeader>
         <CardContent>
